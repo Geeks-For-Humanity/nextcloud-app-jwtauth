@@ -11,9 +11,11 @@ class Application extends App {
 		$container = $this->getContainer();
 
 		$container->registerService('jwtAuthTokenParser', function ($c) {
+			$cacheFactory = $c->get(\OCP\ICacheFactory::class);
 			$config = $c->query(\OCP\IConfig::class);
 
 			return new \OCA\JwtAuth\Helper\JwtAuthTokenParser(
+				$cacheFactory,
 				$config->getSystemConfig()->getValue('jwtauth')['SharedSecret'],
 			);
 		});
