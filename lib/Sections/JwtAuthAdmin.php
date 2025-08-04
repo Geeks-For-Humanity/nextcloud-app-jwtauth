@@ -19,7 +19,7 @@ class JwtAuthAdmin implements IIconSection {
     }
 
     public function getID(): string {
-        return 'notes';
+        return 'jwtauth';
     }
 
     public function getName(): string {
