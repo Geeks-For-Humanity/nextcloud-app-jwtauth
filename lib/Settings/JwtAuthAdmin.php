@@ -27,7 +27,7 @@ class JwtAuthAdmin implements ISettings {
     }
 
     public function getSection() {
-        return 'notes'; // Name of the previously created section.
+        return 'jwtauth'; // Name of the previously created section.
     }
 
     /**
