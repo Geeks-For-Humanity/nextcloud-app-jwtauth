@@ -20,7 +20,7 @@ class JwtAuthAdmin implements ISettings {
      */
     public function getForm() {
         $parameters = [
-            'mySetting' => $this->config->getSystemValue('my_notes_setting', true),
+            'mySetting' => $this->config->getSystemValue('my_jwtauth_setting', true),
         ];
 
         return new TemplateResponse('settings', 'settings/admin', $parameters, '');
